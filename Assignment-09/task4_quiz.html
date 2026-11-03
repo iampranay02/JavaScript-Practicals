@@ -1,0 +1,21 @@
+<!-- Name: Pranay Kesarwani | Roll No: 2510303375 | Assignment: 9 -->
+<!DOCTYPE html>
+<html>
+<head><title>Assignment 9 - Task 4</title></head>
+<body>
+  <p>What is 2 + 3?</p>
+  <label><input type="radio" name="ans" value="4"> 4</label>
+  <label><input type="radio" name="ans" value="5"> 5</label>
+  <label><input type="radio" name="ans" value="6"> 6</label>
+  <br><br>
+  <button id="check">Check answer</button>
+  <p id="result"></p>
+  <script>
+    document.getElementById("check").addEventListener("click", function () {
+      const chosen = document.querySelector('input[name="ans"]:checked');
+      document.getElementById("result").textContent =
+        chosen && chosen.value === "5" ? "Correct" : "Try again";
+    });
+  </script>
+</body>
+</html>

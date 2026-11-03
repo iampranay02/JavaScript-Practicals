@@ -1,0 +1,16 @@
+<!-- Name: Pranay Kesarwani | Roll No: 2510303375 | Assignment: 9 -->
+<!DOCTYPE html>
+<html>
+<head><title>Assignment 9 - Task 3</title></head>
+<body>
+  <input type="text" id="note" placeholder="Type a note">
+  <button id="save">Save</button>
+  <script>
+    const box = document.getElementById("note");
+    box.value = localStorage.getItem("note") || "";
+    document.getElementById("save").addEventListener("click", function () {
+      localStorage.setItem("note", box.value);
+    });
+  </script>
+</body>
+</html>
